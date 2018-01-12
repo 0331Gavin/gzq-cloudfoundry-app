@@ -1,0 +1,19 @@
+---
+applications:
+- name: gzq-657632023
+  memory: 1024M
+path: target/gzq-cloudfoundry-app-0.0.1-SNAPSHOT.jar
+buildpack: java_buildpack
+#routes:
+#  - route:  oper-mgr2.apps.cftest.net
+services:
+#- mq-bus-for-base
+- p-service-registry
+#- oracle-for-tanda
+#- redis-for-base
+env:
+    CF_TARGET: https://api.run.pivotal.io
+#    JAVA_OPTS: -agentlib:jdwp=transport=dt_socket,server=n,address=192.168.120.134:16000,suspend=y
+#    -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=16000
+
+#login : cf login -a https://api.run.pivotal.io --skip-ssl-validation
